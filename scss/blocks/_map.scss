@@ -1,0 +1,13 @@
+@use "../helpers/" as *;
+
+.map-block {
+  height: rem(1040);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .map {
+    width: rem(1473);
+    height: rem(640);
+  }
+}

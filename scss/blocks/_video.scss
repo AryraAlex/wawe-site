@@ -1,0 +1,14 @@
+@use "../helpers/" as *;
+
+.video-content {
+  height: rem(1000);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  width: rem(1200);
+  height: rem(600);
+}

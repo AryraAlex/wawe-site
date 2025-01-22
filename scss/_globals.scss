@@ -1,0 +1,105 @@
+@use "helpers/" as *;
+@use "fonts" as *;
+
+body {
+  @include fluid-text(18, 14);
+  letter-spacing: 0.03em;
+  color: $text-color-dark;
+  background-color: $color-white;
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  @include fontRaleway(600, $text-color-title);
+}
+
+h3,
+.h3 {
+  @include fontRaleway(500, $text-color-dark);
+}
+
+h4,
+.h4 {
+  @include fontRoboto(500, $color-white);
+}
+
+h5,
+.h5 {
+  @include fontRoboto(500, $text-color-title);
+}
+
+h6,
+.h6 {
+  @include fontRoboto(700, $text-color-dark);
+}
+
+h1,
+.h1 {
+  @include fluid-text(200, 70);
+  line-height: 1;
+}
+
+h2,
+.h2 {
+  @include fluid-text(48, 24);
+}
+
+h3,
+.h3 {
+  @include fluid-text(24, 18);
+  line-height: 0.2;
+}
+
+h4,
+.h4 {
+  @include fluid-text(24, 18);
+  line-height: 0.56;
+}
+
+h5,
+.h5 {
+  @include fluid-text(36, 20);
+  line-height: 0.4;
+}
+
+h6,
+.h6 {
+  @include fluid-text(20, 16);
+  line-height: 0.2;
+}
+
+p,
+.p {
+  @include fontRoboto(400);
+  @include fluid-text(18, 14);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: $transition-duration;
+}
+
+a {
+  @include fluid-text(24, 14);
+
+  
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) dashed $color-white;
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+

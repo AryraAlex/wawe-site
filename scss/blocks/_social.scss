@@ -1,0 +1,17 @@
+@use "../helpers/" as *;
+
+.social-block {
+  height: rem(200);
+  display: flex;
+  justify-content: center;
+  gap: rem(10);
+
+  .social-link {
+    @include font-roboto-regular-small;
+    color: $text-color-dark;
+  }
+
+  .social-link--accent {
+    color: $color-accent;
+  }
+}

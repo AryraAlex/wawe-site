@@ -1,0 +1,10 @@
+@use "../helpers/" as *;
+
+.footer-block {
+  height: rem(200);
+  background-color: $color-accent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,148 @@
+@use 'sass:math';
+@use "functions" as *;
+@use "variables" as *;
+@use "media" as *;
+
+
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: fluid($max, $min);
+}
+
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else  {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@mixin pos-fixed {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 15px 0 15px 0;
+}
+
+@mixin fontRoboto($fontWeight, $fontColor: $text-color-dark) {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: $fontWeight;
+  color: $fontColor;
+}
+
+@mixin fontRaleway($fontWeight, $fontColor: $text-color-title)  {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: $text-color-title;
+  position: relative;
+}
+
+@mixin slashNew {
+  content: "/";
+
+  font-family: "Raleway", sans-serif;
+  font-size: rem(72);
+  font-weight: 600;
+  position: absolute;
+
+  color: $color-accent;
+}
+
+@mixin dollar {
+  content: "$";
+  position: absolute;
+  top: 20%;
+  padding-left: rem(5);
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: rem(24);
+  font-weight: 400;
+  color: $text-color-title;
+}
+
+
+
+
+@mixin font-roboto-regular-small {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: rem(24);
+  font-weight: 400;
+}
+@mixin font-roboto-regular {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: rem(48);
+  font-weight: 400;
+  color: $color-white;
+}
+@mixin font-roboto-bold {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: rem(64);
+  font-weight: 700;
+  color: $text-color-title;
+}
+@mixin font-roboto-italic {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: rem(36);
+  font-weight: 400;
+  color: $text-color-dark;
+}
+@mixin font-roboto-italic-light {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: rem(16);
+  font-weight: 300;
+  color: $text-color-dark;
+}
+@mixin font-roboto-light {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  font-size: rem(17);
+  color: $text-color-dark;
+}
+@mixin font-raleway-semibold {
+  font-family: "Raleway", sans-serif;
+  font-size: rem(48);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $text-color-title;
+  position: relative;
+}

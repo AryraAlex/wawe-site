@@ -1,0 +1,25 @@
+@use "../helpers/" as *;
+
+.quote-content {
+  background-color: $color-background;
+
+  height: rem(200);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockquote {
+  &__quote {
+    @include font-roboto-italic;
+
+    padding-inline: rem(150)
+  }
+  &__author {
+    @include font-roboto-italic-light;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+}

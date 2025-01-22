@@ -1,0 +1,42 @@
+@use "../helpers/" as *;
+
+.team {
+  height: rem(1000);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: rem(200);
+
+  &__title {
+    @include font-raleway-semibold;
+  }
+  &__title::after {
+    @include slashNew;
+  }
+
+  &-block {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    gap: rem(105);
+
+    .coach {
+      &__image {
+        border-radius: rem(10);
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: rem(18);
+        font-weight: 400;
+
+        margin-top: rem(25);
+      }
+    }
+  }
+}

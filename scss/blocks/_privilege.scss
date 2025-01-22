@@ -1,0 +1,98 @@
+@use "../helpers/" as *;
+.privilege {
+  background-color: $color-background;
+}
+
+.privilege-content {
+  height: rem(955);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: rem(100);
+}
+
+.privilege-title {
+  @include font-raleway-semibold;
+}
+.privilege-title::after {
+  @include slashNew;
+}
+
+.privilege-list {
+  // Тут я не определился, какой вариант будет лучше (Отличия в отображении контента. Дисплей флекс мне больше зашел
+
+  // display: grid;
+  // grid-auto-flow: column dense;
+  // grid-auto-rows: 1fr;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-rows: 1fr;
+  // gap: 0px 75px;
+  display: flex;
+  gap: rem(75);
+
+  &__content {
+    position: relative;
+
+    &-title {
+      @include font-roboto-regular-small;
+      color: $text-color-dark;
+      text-transform: uppercase;
+
+      display: flex;
+      justify-content: center;
+    }
+    .privilege-list__content-icon {
+      position: absolute;
+      top: 5px;
+      left: 40px
+    }
+
+
+    &-paragraph {
+      @include font-roboto-light;
+    }
+  }
+}
+
+.privilege-graphic {
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "privilege-graphic__list privilege-text";
+
+  &__list {
+    .privilege-graphic__list-item1,
+    .privilege-graphic__list-item2,
+    .privilege-graphic__list-item3 {
+      @include font-roboto-regular-small;
+    }
+    .privilege-graphic__list-text {
+      @include font-roboto-light;
+    }
+  }
+  .privilege-graphic__list-item1::before {
+    content: url(../img/svg/graph01.svg);
+    margin-right: rem(10);
+  }
+  .privilege-graphic__list-item2::before {
+    content: url(../img/svg/graph02.svg);
+    margin-right: rem(10);
+  }
+  .privilege-graphic__list-item3::before {
+    content: url(../img/svg/graph03.svg);
+    margin-right: rem(10);
+  }
+
+  .privilege-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 0px;
+    grid-area: privilege-text;
+
+    @include font-roboto-light;
+  }
+}

@@ -1,0 +1,33 @@
+@use "../helpers/" as *;
+
+.training {
+  height: rem(1050);
+}
+
+.training-container {
+  display: flex;
+  justify-content: center;
+  gap: rem(90);
+}
+
+.training-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__title {
+    @include font-raleway-semibold;
+    padding-bottom: rem(100);
+    position: relative;
+  }
+  &__title::after {
+    @include slashNew;
+  }
+
+  &__paragraph {
+    @include font-roboto-light;
+    padding-bottom: rem(30);
+  }
+
+
+}

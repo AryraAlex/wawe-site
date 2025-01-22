@@ -1,0 +1,92 @@
+@use "../helpers/" as *;
+
+.gallery {
+  height: rem(1262);
+}
+
+.gallery-content {
+  min-height: 100%;
+  margin-bottom: rem(200)
+}
+
+.gallery__title {
+  @include font-raleway-semibold;
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem(215);
+}
+.gallery__title::after {
+  @include slashNew;
+}
+
+.gallery-tab {
+  display: flex;
+  column-gap: rem(20);
+  margin-bottom: rem(50);
+
+  &__btn--all {
+    @include font-roboto-regular-small;
+    transition: 0.2s;
+    cursor: default;
+    background-color: transparent;
+  }
+  &__btn--all:hover {
+    color: $taxt-color-hover;
+  }
+
+  &__btn {
+    @include font-roboto-regular-small;
+    transition: 0.5s;
+    cursor: default;
+    background-color: transparent;
+  }
+  &__btn:hover {
+    color: $taxt-color-hover;
+  }
+  .gallery-tab__btn--active {
+    color: $color-accent;
+  }
+}
+
+.gallery-image__item {
+  display: none;
+  margin-bottom: rem(40);
+}
+
+.gallery-image__item--active1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(40);
+}
+
+.gallery-image__item--active2 {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: rem(40) rem(40);
+  grid-template-areas:
+    ". . ."
+    ". . .";
+}
+
+.gallery-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+
+
+  @include font-roboto-regular-small;
+  color: $color-white;
+  width: rem(350);
+  height: rem(70);
+  background-color: $color-button-start;
+  transition: background-color 0.5s ease;
+  border-radius: 2rem;
+}
+
+.button:hover {
+  background-color:$color-button-end;
+}

@@ -1,0 +1,27 @@
+@use "functions" as *;
+@use "media" as *;
+
+$color-accent: #00cab6;
+$color-background: #f8f8f8;
+$color-border: #C4C4C4;
+$color-white: #ffffff;
+$color-button-start: #40e0bc;
+$color-button-end: #20b5e4;
+
+$text-color-dark: #242121;
+$text-color-darkgreen: #0d302c;
+$text-color-title: #01353e;
+$text-color-black: #000000;
+$taxt-color-hover: #8b8b8b;
+
+$container-widht: #{rem(1200)};
+$container-padding-x: #{rem(16)};
+
+$transition-duration: 0.2s;
+
+$border-Botom: 1px solid $color-accent;
+
+
+
+
+
