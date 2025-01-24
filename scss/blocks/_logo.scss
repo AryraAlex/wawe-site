@@ -1,0 +1,10 @@
+@use "../helpers/" as *;
+
+.logo {
+  max-width: fluid(60, 40);
+  transition: $transition-duration;
+
+  @include hover {
+    filter: drop-shadow(1rem 0px 2px rgba(255, 255, 255, 0.5));
+  }
+}

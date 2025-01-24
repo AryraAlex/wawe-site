@@ -1,18 +1,18 @@
 @use "../helpers/" as *;
 
 .btn-up {
-    position: fixed;
-    right: 20px;
-    bottom: 0;
+  position: fixed;
+  right: 20px;
+  bottom: 0;
 
-    cursor: pointer;
-    transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    width: 75px;
-    height: 100px;
+  width: 75px;
+  height: 100px;
 }
 .btn-up::before {
   content: "";
@@ -20,14 +20,17 @@
   height: 200px;
 
   background-size: 100% 100%;
-  background-image: url("../../img/svg/btnUp.svg")
+  background-image: url("../../img/svg/btnUp.svg");
 }
 .btn-up:hover {
   transform: scale(1.05);
   opacity: 80%;
 }
-
+.btn-up:active {
+  transform: scale(0.9);
+  opacity: 1;
+}
 
 .btn-up--hide {
-  display: none;
+  opacity: 0;
 }

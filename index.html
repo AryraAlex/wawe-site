@@ -7,25 +7,26 @@
   maximum-scale=1.0, minimum-scale=1.0" />
   <title>Wave</title>
   <link rel="stylesheet" href="./styles/css/styles.css" />
-  <script src="./js/javascript.js" defer></script>
+  <script src="./js/tabs.js" defer></script>
   <script src="./js/slider.js" defer></script>
   <script src="./js/buttonScroll.js" defer></script>
   <script src="./js/animation.js" defer></script>
+  <script src="./js/burger.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header-inner container">
-      <nav class="header-nav">
+      <nav class="header-nav nav">
         <div class="header-nav__bg"></div>
 
         <a href="/" class="header-nav__logo" aria-label="Home" title="Home">
-          <img class="header-nav__logo-img" src="./img/svg/logo.svg" alt="Website logo" width="60" height="63" />
+          <img class="header-nav__logo-img logo" src="./img/svg/logo.svg" alt="Website logo" width="60" height="63" />
         </a>
 
         <ul class="header-nav__list">
           <li class="header-nav__item">
-            <a href="#school-id-link" class="header-nav__link is-activ">О нас</a>
+            <a href="#school-id-link" class="header-nav__link">О нас</a>
           </li>
           <li class="header-nav__item">
             <a href="#privilege-id-link" class="header-nav__link">Услуги</a>
@@ -43,7 +44,15 @@
             <a href="#contact-id-link" class="header-nav__link">Контакты</a>
           </li>
         </ul>
+
+        <button class="header__burger-button burger-button visible-mobile" type="button" aria-label="Open menu" title="Open menu">
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
       </nav>
+
+      
 
       <div class="header-title">
         <h1 class="header-title__main">WAWE</h1>
@@ -53,7 +62,7 @@
   </header>
 
   <main>
-    <section class="school" id="school-id-link">
+    <!-- <section class="school" id="school-id-link">
       <div class="container school-content">
         <h2 class="school__title">О школе, О СЕРФИНГЕ, О КАНАРАХ</h2>
 
@@ -119,7 +128,7 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="privilege" id="privilege-id-link">
       <div class="container privilege-content">
