@@ -1,0 +1,60 @@
+@use "../helpers/" as *;
+
+.nav {
+  @include flex-center(inline-flex);
+  @include mobile {
+    justify-content: space-between;
+
+  }
+}
+
+.header-nav {
+  @include pos-fixed;
+  gap: clamp(10px, 2.2vw, 50px);
+
+  &__bg {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: $text-color-title;
+    transition: $transition-duration;
+  }
+
+  .bg-visible {
+    top: 0;
+    opacity: 0.9;
+  }
+
+  &__list {
+    @include mobile-above;
+    display: contents;
+
+    @include mobile {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      row-gap: 3rem;
+      padding: 1rem;
+      background-color: $text-color-title;
+      transition: $transition-duration;
+
+      &:not(.is-active) {
+        @include hide;
+
+        translate: 100%
+      }
+    }
+  }
+
+  &__link {
+    @include fontRoboto(400, $color-white);
+    @include text-hover-effect;
+    transition: $transition-duration;
+  }
+}

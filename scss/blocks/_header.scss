@@ -13,54 +13,14 @@
     height: inherit;
   }
 
-  &-nav {
-    @include pos-fixed;
-
-    @include flex-center(inline-flex);
-    gap: clamp(10px, 2.2vw, 50px);
-
-    &__logo-img{
-      @include hover {
-        
-      }
-    }
-
-    &__bg {
-      position: absolute;
-      top: -100%;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: $text-color-title;
-      transition: 0.45s ease-in-out;
-    }
-
-    .bg-visible {
-      top: 0;
-      opacity: 0.9;
-    }
-
-    &__list {
-      display: inline-flex;
-      gap: clamp(10px, 2.2vw, 50px);
-    }
-
-    &__link {
-      @include fontRoboto(400, $color-white);
-      @include hover {
-        border-bottom: $border-Botom;
-      }
-    }
-  }
-
   &-title {
     position: fixed;
     text-align: center;
-    transition: 0.2s ease-in-out;
+    transition: $transition-duration;
   }
 
   .title {
-    transform: translateY(-80%);
+    transform: translate3d(0px, calc(var(--scrollTo) / -2), rem(-50));
     opacity: 0;
   }
 }
