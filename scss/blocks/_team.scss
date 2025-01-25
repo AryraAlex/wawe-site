@@ -13,7 +13,7 @@
     @include font-raleway-semibold;
   }
   &__title::after {
-    @include slashNew;
+    @include slash;
   }
 
   &-block {
