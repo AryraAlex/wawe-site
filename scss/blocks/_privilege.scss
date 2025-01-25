@@ -17,7 +17,7 @@
   @include font-raleway-semibold;
 }
 .privilege-title::after {
-  @include slashNew;
+  @include slash;
 }
 
 .privilege-list {

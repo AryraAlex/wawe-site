@@ -21,7 +21,7 @@
     position: relative;
   }
   &__title::after {
-    @include slashNew;
+    @include slash;
   }
 
   &__paragraph {

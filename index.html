@@ -6,26 +6,27 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 
   maximum-scale=1.0, minimum-scale=1.0" />
   <title>Wave</title>
-  <link rel="stylesheet" href="./css/styles.css" />
-  <script src="./js/javascript.js" defer></script>
+  <link rel="stylesheet" href="./styles/css/styles.css" />
+  <script src="./js/tabs.js" defer></script>
   <script src="./js/slider.js" defer></script>
   <script src="./js/buttonScroll.js" defer></script>
   <script src="./js/animation.js" defer></script>
+  <script src="./js/burger.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header-inner container">
-      <nav class="header-nav">
+      <nav class="header-nav nav">
         <div class="header-nav__bg"></div>
 
         <a href="/" class="header-nav__logo" aria-label="Home" title="Home">
-          <img class="header-nav__logo-img" src="./img/svg/logo.svg" alt="Website logo" width="60" height="63" />
+          <img class="header-nav__logo-img logo" src="./img/svg/logo.svg" alt="Website logo" width="60" height="63" />
         </a>
 
         <ul class="header-nav__list">
           <li class="header-nav__item">
-            <a href="#school-id-link" class="header-nav__link is-activ">О нас</a>
+            <a href="#about-id-link" class="header-nav__link">О нас</a>
           </li>
           <li class="header-nav__item">
             <a href="#privilege-id-link" class="header-nav__link">Услуги</a>
@@ -43,7 +44,15 @@
             <a href="#contact-id-link" class="header-nav__link">Контакты</a>
           </li>
         </ul>
+
+        <button class="header__burger-button burger-button visible-mobile" type="button" aria-label="Open menu" title="Open menu">
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
       </nav>
+
+      
 
       <div class="header-title">
         <h1 class="header-title__main">WAWE</h1>
@@ -53,64 +62,57 @@
   </header>
 
   <main>
-    <section class="school" id="school-id-link">
-      <div class="container school-content">
-        <h2 class="school__title">О школе, О СЕРФИНГЕ, О КАНАРАХ</h2>
+    <section class="about" id="about-id-link">
+      <div class="about-inner container">
+        <h2 class="about__title title">О школе, О СЕРФИНГЕ, О КАНАРАХ</h2>
 
-        <div class="school-about">
-          <p class="school-about__item">
+        <div class="about-content">
+          <p class="about-content__item">
             Канарские острова не случайно называют европейскими Гавайями – это
             идеальное место для поклонников серфинга: стабильный теплый ветер
             круглый год, песчаные пляжи, километры нетронутых просторов и
             прозрачное море. А настоящей Меккой для серфингистов становится
             Фуэртевентура – второй по величине остров архипелага.
           </p>
-
-          <p class="school-about__item">
+          <p class="about-content__item">
             Именно здесь лучшее в Испании место, в котором можно пройти
             обучение серфингу. Кроме того, что зимой и осенью сюда приходят
             огромные атлантические волны, Фуэртевентура может похвастать и
             множеством мелководных спокойных лагун, отлично подходящих для
             обучения начинающих серфингистов.
           </p>
-
-          <p class="school-about__item">
+          <p class="about-content__item">
             Серфинг на Канарских островах доступен круглый год – и волны, и
             подходящая погода здесь есть всегда. Причем волну, подходящую по
             уровню, сможет найти и настоящий профи, и новичок. Не случайно
             считается, что именно это место лучше всего подойдет для обучения
             здесь возможно без сложностей переходить на новый уровень.
           </p>
-
-          <p class="school-about__item">
+          <p class="about-content__item">
             Перечисляя достоинства, нельзя обойти и то, что пляжи
             Фуэртевентуры самые протяженные на Канарах. В итоге невозможно
             представить их переполненных туристами. Вы столкнетесь только с
             теми, кого, как и вас, будет интересовать одна цель – обучение
             серфингу.
           </p>
-
-          <p class="school-about__item">
+          <p class="about-content__item">
             Пока что вы только хотите понять, что такое серфинг, или уже
             испытали всю прелесть катания на волнах, но желаете поднять свой
             уровень? Наша школа серфинга сможет предложить обучение для любого
             уровня подготовки.
           </p>
-
-          <p class="school-about__item">
+          <p class="about-content__item">
             Четыре часа увлекательных занятий в день помогут вам уверенно
             покорять волны, почувствовать себя настоящим серфингистом.
           </p>
-
-          <p class="school-about__item">
+          <p class="about-content__item">
             Основные достоинства нашей русской школы – высокое качество
             преподавания и организации занятий, безопасность (все наши клиенты
             застрахованы в компании Allianz), отличный инвентарь и экипировка
             (предоставляется на весь курс обучения), в том числе мягкие
             безопасные доски для начинающих.
           </p>
-
-          <p class="school-about__item">
+          <p class="about-content__item">
             Сначала мы определяем уровень катания и физической подготовки и
             только потом составляем программу подготовки. И можем заверить,
             что после того, как закончится обучение, вы не только получите
@@ -121,7 +123,7 @@
       </div>
     </section>
 
-    <section class="privilege" id="privilege-id-link">
+     <section class="privilege" id="privilege-id-link">
       <div class="container privilege-content">
         <h2 class="privilege-title">В ШКОЛЕ ВЫ ПОЛУЧИТЕ</h2>
 
@@ -201,7 +203,7 @@
       </div>
     </section>
 
-    <section class="training">
+    <!--<section class="training">
       <div class="training-container">
         <div class="training-content">
           <h2 class="training-content__title">ПОКОРЯЙ ВЕРШИНЫ</h2>
@@ -564,7 +566,7 @@
       <a href="" class="social-link">INSTAGRAM</a>
       <a href="" class="social-link social-link--accent">FACEBOOK</a>
       <a href="" class="social-link">YOUTUBE</a>
-    </article>
+    </article> -->
   </main>
 
   <footer class="footer-block">

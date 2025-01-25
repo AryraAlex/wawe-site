@@ -16,7 +16,7 @@
   margin-bottom: rem(215);
 }
 .gallery__title::after {
-  @include slashNew;
+  @include slash;
 }
 
 .gallery-tab {

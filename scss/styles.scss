@@ -1,0 +1,25 @@
+@use "./normalize";
+@use "./fonts";
+@use "./utils";
+@use "./globals";
+
+
+@use "./blocks/burgerButton";
+@use "./blocks/logo";
+@use "./blocks/nav";
+@use "./blocks/header";
+@use "./blocks/about";
+@use "./blocks/privilege";
+@use "./blocks/training";
+@use "./blocks/gallery";
+@use "./blocks/quote";
+@use "./blocks/video";
+@use "./blocks/info";
+@use "./blocks/slider";
+@use "./blocks/team";
+@use "./blocks/price.scss";
+@use "./blocks/map";
+@use "./blocks/form";
+@use "./blocks/social";
+@use "./blocks/footer";
+@use "./blocks/buttonUp";

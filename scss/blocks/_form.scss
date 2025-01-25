@@ -14,7 +14,7 @@
   text-align: center;
 }
 .form__title::after {
-  @include slashNew;
+  @include slash;
 }
 
 .form-inner {

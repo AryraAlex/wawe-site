@@ -16,7 +16,7 @@
   @include font-raleway-semibold;
 }
 .price__title::after {
-  @include slashNew;
+  @include slash;
 }
 
 .price-card-block {

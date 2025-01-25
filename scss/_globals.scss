@@ -1,6 +1,14 @@
 @use "helpers/" as *;
 @use "fonts" as *;
 
+html {
+  overflow-x: hidden;
+
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
 body {
   @include fluid-text(18, 14);
   letter-spacing: 0.03em;
@@ -37,13 +45,18 @@ h6,
 
 h1,
 .h1 {
-  @include fluid-text(200, 70);
+  @include fluid-text(200, 80);
+  text-transform: uppercase;
   line-height: 1;
 }
 
 h2,
 .h2 {
-  @include fluid-text(48, 24);
+  @include fluid-text(48, 18);
+  position: relative;
+  &::after {
+    @include slash;
+  }
 }
 
 h3,

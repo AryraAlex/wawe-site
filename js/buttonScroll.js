@@ -1,26 +1,26 @@
-const btnUp = {el: document.querySelector('.btn-up'),
+const btnUp = {
+  el: document.querySelector(".btn-up"),
   show() {
-    this.el.classList.remove('btn-up--hide');
+    this.el.classList.remove("btn-up--hide");
   },
   hide() {
-    this.el.classList.add('btn-up--hide');
+    this.el.classList.add("btn-up--hide");
   },
 
   btnScroolUp() {
-
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       const scrollUp = window.scrollY || document.documentElement.scrollTop;
       scrollUp > 1000 ? this.show() : this.hide();
     });
 
-    document.querySelector('.btn-up').onclick = () => {
+    document.querySelector(".btn-up").onclick = () => {
       window.scrollTo({
         top: 0,
         left: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
-    }
-  }
-}
+    };
+  },
+};
 
 btnUp.btnScroolUp();
