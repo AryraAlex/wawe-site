@@ -5,11 +5,9 @@
     @include flex-center;
     flex-direction: column;
     gap: rem(70);
-    padding-block: rem(70);
 
     @include mobile {
       gap: rem(18);
-      padding-block: rem(40);
       margin-inline: 1rem;
     }
   }
@@ -28,34 +26,7 @@
     }
 
     &__item {
-      position: relative;
-      padding: 5px;
-      border-radius: 0.5rem;
-      background: $color-white;
-      box-shadow: inset 0px 0px 3px $color-border;
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        top: -2%;
-        left: -0.5%;
-        padding: 1px;
-        border-radius: 0.5rem;
-        z-index: -1;
-        transition: 1s;
-        opacity: 0;
-        background: $color-accent;
-      }
-
-      @include hover {
-        &::after {
-          opacity: 1;
-          width: 101%;
-          height: 104%;
-        }
-      }
+      @include border-animate;
     }
   }
 }
