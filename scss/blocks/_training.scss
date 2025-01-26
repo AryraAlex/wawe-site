@@ -1,33 +1,49 @@
 @use "../helpers/" as *;
 
 .training {
-  height: rem(1050);
-}
-
-.training-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: rem(90);
+  margin-inline: 1rem;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__content {
+    &-title {
+      margin-bottom: rem(70);
+      text-align: center;
+    }
+
+    &-paragraph {
+      margin-bottom: rem(30);
+      width: rem(550);
+    }
+
+    &-image {
+      width: 960px;
+      height: 850px;
+    }
+  }
 }
 
-.training-content {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  &__title {
-    @include font-raleway-semibold;
-    padding-bottom: rem(100);
-    position: relative;
+@include laptop {
+  .training__content-image {
+    width: 760px;
+    height: 650px;
   }
-  &__title::after {
-    @include slash;
+}
+
+@include mobile {
+  .training__content-image {
+    display: none;
   }
-
-  &__paragraph {
-    @include font-roboto-light;
-    padding-bottom: rem(30);
+  .training__content-title {
+    margin-bottom: rem(40);
   }
-
-
+  .training__content-paragraph {
+    width: auto;
+  }
 }

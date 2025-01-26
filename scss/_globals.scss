@@ -128,3 +128,9 @@ span {
   @include fluid-text(24, 18)
 }
 
+.border-box {
+  padding: 5px;
+  border-radius: 0.5rem;
+  background: $color-white;
+  box-shadow: inset 0px 0px 3px $color-border;
+}
