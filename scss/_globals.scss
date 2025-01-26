@@ -62,7 +62,8 @@ h2,
 h3,
 .h3 {
   @include fluid-text(24, 18);
-  line-height: 0.2;
+  text-transform: uppercase;
+  color: $text-color-dark;
 }
 
 h4,
@@ -85,7 +86,7 @@ h6,
 
 p,
 .p {
-  @include fontRoboto(400);
+  @include fontRoboto(300);
   @include fluid-text(18, 14);
 }
 
@@ -115,4 +116,15 @@ a {
   transition-duration: 0s !important;
 }
 
+section {
+  padding-block: rem(70);
+  @include mobile {
+    padding-block: rem(40);
+  }
+}
+
+span {
+  @include fontRoboto(400);
+  @include fluid-text(24, 18)
+}
 

@@ -17,6 +17,10 @@
     position: fixed;
     text-align: center;
     transition: $transition-duration;
+
+    &__second {
+      font-weight: 400;
+    }
   }
 
   .title {
