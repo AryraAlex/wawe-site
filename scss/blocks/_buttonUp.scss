@@ -23,7 +23,7 @@
   background-image: url("../../img/svg/btnUp.svg");
 }
 .btn-up:hover {
-  transform: scale(1.05);
+  transform: $transform-scale;
   opacity: 80%;
 }
 .btn-up:active {

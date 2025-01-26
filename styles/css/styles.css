@@ -356,7 +356,6 @@ p,
 }
 
 a,
-button,
 label,
 input,
 textarea,
@@ -399,6 +398,22 @@ span {
   border-radius: 0.5rem;
   background: #ffffff;
   box-shadow: inset 0px 0px 3px #C4C4C4;
+}
+
+.button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: clamp(1.125rem, 1.0294117647rem + 0.3921568627vw, 1.5rem);
+  width: 21.875rem;
+  height: 4.375rem;
+  background-color: #40e0bc;
+  transition: 0.2s ease-in-out;
+  border-radius: 2rem;
+}
+.button:hover {
+  background-color: #20b5e4;
+  transform: scale(1.05);
 }
 
 .burger-button {
@@ -760,80 +775,42 @@ span {
     width: auto;
   }
 }
-.gallery {
-  height: 78.875rem;
-}
-
-.gallery-content {
-  min-height: 100%;
-  margin-bottom: 12.5rem;
-}
-
 .gallery__title {
-  font-family: "Raleway", sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #01353e;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 13.4375rem;
+  text-align: center;
+  margin-bottom: 4.375rem;
 }
-
-.gallery__title::after {
-  font-size: clamp(2.125rem, 1.5196078431rem + 2.4836601307vw, 4.5rem);
-  content: "/";
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  position: absolute;
-  color: #00cab6;
-}
-
-.gallery-tab {
+.gallery__tab {
   display: flex;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
   margin-bottom: 3.125rem;
 }
-.gallery-tab__btn--all {
+.gallery__tab-btn {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.5rem;
   font-weight: 400;
-  transition: 0.2s;
+  color: #242121;
+  font-size: clamp(1.125rem, 1.0294117647rem + 0.3921568627vw, 1.5rem);
+  transition: 0.2s ease-in-out;
   cursor: default;
   background-color: transparent;
 }
-.gallery-tab__btn--all:hover {
-  color: #8b8b8b;
+.gallery__tab-btn:hover:not(.gallery__tab-btn--active) {
+  opacity: 0.5;
+  transform: scale(1.05);
 }
-.gallery-tab__btn {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  transition: 0.5s;
-  cursor: default;
-  background-color: transparent;
-}
-.gallery-tab__btn:hover {
-  color: #8b8b8b;
-}
-.gallery-tab .gallery-tab__btn--active {
+.gallery__tab-btn--active {
   color: #00cab6;
 }
-
-.gallery-image__item {
+.gallery__image-item {
   display: none;
   margin-bottom: 2.5rem;
 }
-
-.gallery-image__item--active1 {
+.gallery__image-item--active1 {
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
 }
-
-.gallery-image__item--active2 {
+.gallery__image-item--active2 {
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -841,26 +818,9 @@ span {
   gap: 2.5rem 2.5rem;
   grid-template-areas: ". . ." ". . .";
 }
-
-.gallery-btn {
+.gallery__button {
   display: flex;
   justify-content: center;
-}
-
-.button {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #ffffff;
-  width: 21.875rem;
-  height: 4.375rem;
-  background-color: #40e0bc;
-  transition: background-color 0.5s ease;
-  border-radius: 2rem;
-}
-
-.button:hover {
-  background-color: #20b5e4;
 }
 
 .quote-content {

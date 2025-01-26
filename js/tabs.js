@@ -1,10 +1,10 @@
-const galleryTab = ".gallery-tab__btn";
-const galleryImage = ".gallery-image__item";
-const galleryTabAll = ".gallery-tab__btn--all";
+const galleryTab = ".gallery__tab-btn";
+const galleryImage = ".gallery__image-item";
+const galleryTabAll = ".gallery__tab-btn--all";
 
-const currentTab = "gallery-tab__btn--active";
-const currentImage = "gallery-image__item--active1";
-const currentImage2 = "gallery-image__item--active2";
+const currentTab = "gallery__tab-btn--active";
+const currentImage = "gallery__image-item--active1";
+const currentImage2 = "gallery__image-item--active2";
 
 const galleryTabs = document.querySelectorAll(galleryTab);
 const galleryImages = document.querySelectorAll(galleryImage);

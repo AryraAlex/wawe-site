@@ -91,7 +91,6 @@ p,
 }
 
 a,
-button,
 label,
 input,
 textarea,
@@ -133,4 +132,18 @@ span {
   border-radius: 0.5rem;
   background: $color-white;
   box-shadow: inset 0px 0px 3px $color-border;
+}
+
+.button {
+  @include fontRoboto(500, $color-white);
+  @include fluid-text(24, 18);
+  width: rem(350);
+  height: rem(70);
+  background-color: $color-button-start;
+  transition: $transition-duration;
+  border-radius: 2rem;
+  &:hover {
+    background-color: $color-button-end;
+    transform: $transform-scale;
+  }
 }
