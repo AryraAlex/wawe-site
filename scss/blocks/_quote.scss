@@ -1,25 +1,23 @@
 @use "../helpers/" as *;
 
-.quote-content {
+.quote {
   background-color: $color-background;
-
   height: rem(200);
+  @include flex-center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.blockquote {
-  &__quote {
-    @include font-roboto-italic;
-
-    padding-inline: rem(150)
-  }
-  &__author {
-    @include font-roboto-italic-light;
-
-    display: flex;
-    justify-content: flex-end;
+  .blockquote {
+    margin-inline: 1rem;
+    @include flex-center;
+    flex-direction: column;
+    &__quote {
+      @include fontRoboto(400);
+      @include fluid-text(36, 18);
+      // padding-inline: rem(150);
+    }
+    &__author {
+      @include fontRoboto(300);
+      @include fluid-text(18, 16);
+      margin-left: clamp(1rem, 20vw, 26rem);
+    }
   }
 }
