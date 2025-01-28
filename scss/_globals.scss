@@ -60,8 +60,14 @@ input,
 textarea,
 select,
 svg * {
-  transition-duration: $transition-duration;
+  transition: $transition-duration;
 }
+
+label {
+  @include fontRoboto(400, $color-accent);
+  @include fluid-text(16, 14);
+}
+
 
 a {
   @include fluid-text(24, 14);
@@ -86,7 +92,7 @@ section {
 
 span {
   @include fontRoboto(400);
-  @include fluid-text(24, 18)
+  @include fluid-text(24, 18);
 }
 
 .border-box {

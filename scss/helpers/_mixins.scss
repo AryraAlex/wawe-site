@@ -157,6 +157,23 @@
   margin-right: 10px;
 }
 
+@mixin input-form {
+  @include fontRoboto(400, $color-accent);
+  @include fluid-text(16, 14);
+  width: rem(570);
+  height: rem(38);
+  border: none;
+  border-bottom: 2px solid $color-border;
+  background-color: transparent;
+  outline: none;
+  &:hover {
+    border-bottom: 2px solid $color-accent;
+  }
+  &:focus {
+    border-bottom: 2px solid $color-accent;
+  }
+}
+
 
 
 

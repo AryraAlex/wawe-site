@@ -1,20 +1,13 @@
 @use "../helpers/" as *;
 
 .form-block {
-  height: rem(1050);
-
   display: flex;
   flex-direction: column;
-  gap: rem(240);
-}
 
-.form__title {
-  @include font-raleway-semibold;
-
-  text-align: center;
-}
-.form__title::after {
-  @include slash;
+  &__title {
+    text-align: center;
+    margin-bottom: rem(70);
+  }
 }
 
 .form-inner {
@@ -29,31 +22,20 @@
   flex-direction: column;
   gap: rem(50);
 
-  .form-content {
+  &-content {
     position: relative;
   }
 
-  &__input,
-  &__label {
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: rem(16);
-    font-weight: 400;
-    transition: 0.3s;
-  }
-
   &__input {
-    width: rem(570);
-    height: rem(38);
-
-    border: none;
-    border-bottom: 2px solid $color-border;
-
-    background-color: transparent;
-    outline: none;
+    @include input-form;
   }
-  &__input:focus {
-    border-bottom: 2px solid $color-accent;
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
+ 
   &__input:focus ~ &__label,
   &__input:not(:placeholder-shown) ~ &__label {
     top: -18px;
@@ -61,26 +43,12 @@
     opacity: 20%;
   }
 
-  &__label {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    color: $color-accent;
-  }
-
   &__label--last {
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: rem(16);
-    font-weight: 400;
     line-height: 20px;
-    color: $color-accent;
-
     position: absolute;
     top: 0;
     left: 0;
-    transition: .3s;
-  
+    transition: 0.3s;
   }
   &__input:focus ~ &__label--last,
   &__input:not(:placeholder-shown) ~ &__label--last {
@@ -104,8 +72,20 @@
   padding: rem(35) rem(50);
 
   &__text {
-    @include font-roboto-regular-small;
-    color: $text-color-dark;
+    @include fontRoboto(400);
+    @include fluid-text(24, 16);
   }
 }
 
+@include mobile {
+  .form-inner {
+    flex-direction: column;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .form-info {
+    width: auto;
+    height: auto;
+  }
+}

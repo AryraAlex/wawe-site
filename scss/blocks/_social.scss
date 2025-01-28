@@ -1,10 +1,10 @@
 @use "../helpers/" as *;
 
 .social-block {
-  height: rem(200);
   display: flex;
   justify-content: center;
   gap: rem(10);
+  margin-bottom: rem(70);
 
   .social-link {
     @include font-roboto-regular-small;

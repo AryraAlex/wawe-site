@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: space-between;
   padding: rem(8.5) rem(4.25);
-  color: $color-white;
   background-color: transparent;
   border: none;
 
@@ -36,7 +35,7 @@
   &__line {
     width: 100%;
     height: rem(2);
-    background-color: currentColor;
+    background-color: $color-white;
     border-radius: 1rem;
     transition: $transition-duration;
 
