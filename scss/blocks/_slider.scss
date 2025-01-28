@@ -1,134 +1,122 @@
 @use "../helpers/" as *;
 
-.slider-block {
-  height: rem(1285);
-}
-
-.slider__main-title {
-  @include font-raleway-semibold;
-  text-align: center;
-}
-.slider__main-title::after {
-  @include slash;
-}
-
 .slider {
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slide-area {
-  height: rem(800);
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-}
-
-.slide {
-  display: none;
-  min-height: 100%;
-  width: 100vw;
-  overflow: hidden;
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    filter: brightness(55%);
+  &__title {
+    text-align: center;
+    margin-bottom: rem(70);
   }
 
-  &-info {
-    position: absolute;
-    top: 45%;
-    right: 15%;
-    width: rem(600);
+  &__block {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &__title {
-      @include font-roboto-regular;
-    }
+    .slide__area {
+      position: relative;
+      overflow: hidden;
 
-    &__text {
-      font-family: "Roboto Condensed", sans-serif;
-      font-weight: 300;
-      font-size: rem(17);
-      color: $color-white;
-    }
+      .slide {
+        display: none;
+        min-height: 100%;
+        width: 100vw;
+        overflow: hidden;
+      
+        &__image {
+          width: 100%;
+          filter: brightness(55%);
+        }
+      
+        &__info {
+          position: absolute;
+          top: 45%;
+          right: 15%;
+          width: rem(600);
+      
+          &-title {
+            @include fontRoboto (400, $color-white);
+            @include fluid-text(48, 18);
+          }
+      
+          &-text {
+            @include fontRoboto (300, $color-white);
+            @include fluid-text(20, 16);
+          }
+      
+          &-list {
+            position: absolute;
+            top: 100%;
+            right: -5%;
+            width: rem(600);
+      
+            &-item {
+              list-style-type: circle;
+            }
+          }
+        }
+      }
 
-    .slide-info-list {
-      position: absolute;
-      top: 100%;
-      right: -5%;
-      width: rem(600);
+      .slide--active {
+        display: flex;
+      }
+      
+      .point-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(15);
+      
+        position: absolute;
+        bottom: 50px;
+        width: 100vw;
+      
+        &__item {
+          width: 15px;
+          height: 15px;
+          background-color: $color-white;
+          border-radius: 50%;
+          transition: 0.3s;
+        }
+        &__item:hover {
+          transform: scale(1.5);
+        }
+      }
+      
+      .point-area__item--active,
+      .point-area__item--active:hover {
+        background-color: $color-accent;
+        transform: none;
+      }
 
-      &__item {
-        list-style-type: circle;
+      .controls {
+        position: absolute;
+        top: 45%;
+        width: 100px;
+        height: 100px;
+        background-color: rgba($color: #242121, $alpha: 0.9);
+        border-radius: 50%;
+        color: $color-white;
+        transition: $transition-duration;
+        &:hover {
+          transform: $transform-scale;
+        }
+        &:active {
+          transform: scale(0.95);
+          background-color: rgba($color: #242121, $alpha: 1);
+        }
+      }
+      
+      .prev {
+        @include flex-center;
+        font-size: rem(100);
+        left: 30px;
+      }
+      
+      .next {
+        @include flex-center;
+        font-size: rem(100);
+        right: 30px;
       }
     }
-  }
-}
-
-.point-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: rem(15);
-
-  position: absolute;
-  bottom: 50px;
-  width: 100vw;
-
-  &__item {
-    width: 15px;
-    height: 15px;
-    background-color: $color-white;
-    border-radius: 50%;
-    transition: 0.3s;
-  }
-  &__item:hover {
-    transform: scale(1.5);
-  }
-}
-
-.controls {
-  position: absolute;
-  top: 45%;
-  width: 100px;
-  height: 100px;
-  background-color: rgba($color: #242121, $alpha: 0.9);
-  border-radius: 50%;
-  color: $color-white;
-}
-
-.prev {
-  font-size: rem(100);
-  left: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.next {
-  font-size: rem(100);
-  right: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide--active {
-  display: flex;
-}
-
-.point-area__item--active,
-.point-area__item--active:hover {
-  background-color: $color-accent;
-  transform: none;
-}
-
-@media (max-width: 1650px) {
-  .slide-info {
-    top: 35%;
-    right: 10%;
   }
 }
