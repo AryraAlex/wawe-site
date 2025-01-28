@@ -94,10 +94,8 @@
   top: 20%;
   padding-left: rem(5);
 
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: rem(24);
-  font-weight: 400;
-  color: $text-color-title;
+  @include fontRoboto(400, $text-color-title);
+  @include fluid-text (24, 18);
 }
 
 @mixin text-hover-effect {

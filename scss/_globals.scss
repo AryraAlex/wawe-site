@@ -17,34 +17,8 @@ body {
 }
 
 h1,
-.h1,
-h2,
-.h2 {
-  @include fontRaleway(600, $text-color-title);
-}
-
-h3,
-.h3 {
-  @include fontRaleway(500, $text-color-dark);
-}
-
-h4,
-.h4 {
-  @include fontRoboto(500, $color-white);
-}
-
-h5,
-.h5 {
-  @include fontRoboto(500, $text-color-title);
-}
-
-h6,
-.h6 {
-  @include fontRoboto(700, $text-color-dark);
-}
-
-h1,
 .h1 {
+  @include fontRaleway(600, $text-color-title);
   @include fluid-text(200, 80);
   text-transform: uppercase;
   line-height: 1;
@@ -52,7 +26,9 @@ h1,
 
 h2,
 .h2 {
+  @include fontRaleway(600, $text-color-title);
   @include fluid-text(48, 18);
+  text-transform: uppercase;
   position: relative;
   &::after {
     @include slash;
@@ -61,27 +37,15 @@ h2,
 
 h3,
 .h3 {
+  @include fontRaleway(500, $text-color-dark);
   @include fluid-text(24, 18);
   text-transform: uppercase;
-  color: $text-color-dark;
 }
 
 h4,
 .h4 {
-  @include fluid-text(24, 18);
-  line-height: 0.56;
-}
-
-h5,
-.h5 {
+  @include fontRoboto(400, $text-color-title);
   @include fluid-text(36, 20);
-  line-height: 0.4;
-}
-
-h6,
-.h6 {
-  @include fluid-text(20, 16);
-  line-height: 0.2;
 }
 
 p,
@@ -101,8 +65,6 @@ svg * {
 
 a {
   @include fluid-text(24, 14);
-
-  
 
   &[class] {
     text-decoration: none;
